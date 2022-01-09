@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADVENTURE WEBSITE</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- ----- google fonts---- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1 class="logo">ADVENTURE</h1>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Tours</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+        <div>
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+
+        <img src="images/menu-btn.png" alt="" class="menu-btn">
+    </nav>
+    <header>
+        
+        <div class="modal-container" id="modal_container">
+            <div class="modal">
+                <h1>Modals are </h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, aperiam quod dolore ab sequi,
+                    quasi atque iusto ex quae recusandae repudiandae laboriosam eos placeat eligendi quas nisi, error
+                    quaerat cumque!</p>
+                <button id="close">
+                    Close Me
+                </button>
+            </div>
+        </div>
+        <div class="header-content">
+            <h2>Explore The Colourful World</h2>
+            <div class="line"></div>
+            <h2>A WONDERFUL GIFT</h2>
+            <a href="#" class="ctn">Learn More</a>
+            <button id="open">
+                Click Me TO Open Modal
+            </button>
+        </div>
+        
+    </header>
+    <section class="events">
+        <div class="title">
+            <h1>Upcoming Events</h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="images/img1.png" alt="">
+                <h4>Everest Camp Trek </h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum omnis modi earum asperiores
+                    excepturi saepe?</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+            <div class="col">
+                <img src="images/img2.png" alt="">
+                <h4>Walking Holidays </h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum omnis modi earum asperiores
+                    excepturi saepe?</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+
+        </div>
+    </section>
+    <section class="explore">
+        <div class="explore-content">
+            <h1>EXPLORE THE WORLD</h1>
+            <div class="line"></div>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore perspiciatis, veniam deserunt perferendis
+                aperiam consectetur. Distinctio earum minima iure possimus repellat laboriosam, esse alias at?</p>
+            <a href="#" class="ctn">Learn More</a>
+        </div>
+    </section>
+    <section class="tours">
+        <div class="row">
+            <div class="col content-col">
+                <h1>UPCOMING TOURS & DESTINATIONS</h1>
+                <div class="line"></div>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sapiente est ab, deleniti voluptas
+                    natus dolores ducimus voluptate earum saepe repudiandae. Adipisci ipsa quaerat molestiae neque animi
+                    ducimus atque cupiditate.</P>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+            <div class="col image-col">
+                <div class="image-gallery">
+                    <img src="images/img3.png" alt="">
+                    <img src="images/img4.png" alt="">
+                    <img src="images/img5.png" alt="">
+                    <img src="images/img6.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <p>123 fifth avenue , Ny 10160, NEW YORK , USA | phone 1000-1000-1000 | Email:contact@gmail.com</p>
+        <p>Copyright @ 2022 outdoor Adventure</p>
+    </section>
+
+
+
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn')
+        const navlinks = document.querySelector('.nav-links')
+
+        menuBtn.addEventListener('click', () => {
+            navlinks.classList.toggle('mobile-menu')
+        });
+
+        const open = document.getElementById('open');
+        const modal_container = document.getElementById('modal_container');
+        const close = document.getElementById('close');
+
+        open.addEventListener('click', () => {
+            modal_container.classList.add('show');
+        });
+        close.addEventListener('click', () => {
+            modal_container.classList.remove('show');
+        });
+
+        const chk = document.getElementById('chk');
+
+        chk.addEventListener('change', () => {
+            document.body.classList.toggle('dark');
+        });
+
+    </script>
+
+
+</body>
+
+</html>
